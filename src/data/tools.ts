@@ -1,0 +1,306 @@
+import { PdfTool } from "../types";
+
+export const ALL_TOOLS: PdfTool[] = [
+  // Organize PDF
+  {
+    id: "merge",
+    title: "Merge PDF",
+    category: "organize",
+    description: "Combine multiple PDF files into one unified document with custom page order.",
+    iconName: "Combine",
+    popular: true,
+  },
+  {
+    id: "split",
+    title: "Split PDF",
+    category: "organize",
+    description: "Separate pages or split a PDF into individual files by custom page ranges.",
+    iconName: "Scissors",
+    popular: true,
+  },
+  {
+    id: "remove-pages",
+    title: "Remove Pages",
+    category: "organize",
+    description: "Delete unwanted pages instantly from your PDF document.",
+    iconName: "Trash2",
+  },
+  {
+    id: "extract-pages",
+    title: "Extract Pages",
+    category: "organize",
+    description: "Extract specific pages from your PDF and save them as a clean new PDF.",
+    iconName: "FileOutput",
+  },
+  {
+    id: "organize",
+    title: "Organize PDF",
+    category: "organize",
+    description: "Drag & drop to reorder, rotate, or delete PDF pages in a visual page grid.",
+    iconName: "Grid",
+    popular: true,
+  },
+  {
+    id: "scan-to-pdf",
+    title: "Scan to PDF",
+    category: "organize",
+    description: "Capture physical documents using webcam or camera and compile into PDF.",
+    iconName: "Camera",
+    badge: "Camera",
+  },
+
+  // Optimize PDF
+  {
+    id: "compress",
+    title: "Compress PDF",
+    category: "optimize",
+    description: "Reduce PDF file size while maintaining maximum image and visual quality.",
+    iconName: "Minimize2",
+    popular: true,
+  },
+  {
+    id: "repair",
+    title: "Repair PDF",
+    category: "optimize",
+    description: "Fix corrupted, damaged or unreadable PDF document structures.",
+    iconName: "Wrench",
+  },
+  {
+    id: "ocr",
+    title: "OCR PDF",
+    category: "optimize",
+    description: "Convert scanned PDFs & images into searchable, selectable text with high precision.",
+    iconName: "Eye",
+    badge: "OCR",
+    popular: true,
+  },
+
+  // Convert to PDF
+  {
+    id: "jpg-to-pdf",
+    title: "JPG to PDF",
+    category: "convert-to",
+    description: "Convert JPG, PNG, WEBP and image formats directly into high-res PDF files.",
+    iconName: "Image",
+    popular: true,
+  },
+  {
+    id: "word-to-pdf",
+    title: "Word to PDF",
+    category: "convert-to",
+    description: "Convert DOCX, DOC and text files seamlessly into formatted PDF documents.",
+    iconName: "FileText",
+    popular: true,
+  },
+  {
+    id: "ppt-to-pdf",
+    title: "PowerPoint to PDF",
+    category: "convert-to",
+    description: "Transform slide presentations (PPTX, PPT) into PDF format.",
+    iconName: "Presentation",
+  },
+  {
+    id: "excel-to-pdf",
+    title: "Excel to PDF",
+    category: "convert-to",
+    description: "Turn spreadsheets (XLSX, CSV) into clean PDF tables and reports.",
+    iconName: "Table",
+  },
+  {
+    id: "html-to-pdf",
+    title: "HTML to PDF",
+    category: "convert-to",
+    description: "Convert webpages and raw HTML code into styled PDF documents.",
+    iconName: "Globe",
+  },
+
+  // Convert from PDF
+  {
+    id: "pdf-to-jpg",
+    title: "PDF to JPG",
+    category: "convert-from",
+    description: "Extract images or render every PDF page into high quality JPG/PNG images.",
+    iconName: "FileImage",
+    popular: true,
+  },
+  {
+    id: "pdf-to-word",
+    title: "PDF to Word",
+    category: "convert-from",
+    description: "Convert PDF files into editable Word documents (DOCX).",
+    iconName: "FileEdit",
+    popular: true,
+  },
+  {
+    id: "pdf-to-ppt",
+    title: "PDF to PowerPoint",
+    category: "convert-from",
+    description: "Convert PDF documents into editable presentation slides.",
+    iconName: "MonitorPlay",
+  },
+  {
+    id: "pdf-to-excel",
+    title: "PDF to Excel",
+    category: "convert-from",
+    description: "Extract data tables from PDF into structured Excel spreadsheets.",
+    iconName: "Sheet",
+  },
+  {
+    id: "pdf-to-pdfa",
+    title: "PDF to PDF/A",
+    category: "convert-from",
+    description: "Convert documents to PDF/A standard for long-term digital archiving.",
+    iconName: "Archive",
+  },
+
+  // Edit PDF
+  {
+    id: "rotate",
+    title: "Rotate PDF",
+    category: "edit",
+    description: "Rotate specific or all PDF pages 90°, 180°, or 270° clockwise.",
+    iconName: "RotateCw",
+  },
+  {
+    id: "page-numbers",
+    title: "Add Page Numbers",
+    category: "edit",
+    description: "Insert customizable header/footer page numbers across pages.",
+    iconName: "Hash",
+  },
+  {
+    id: "watermark",
+    title: "Watermark",
+    category: "edit",
+    description: "Overlay custom text or image watermarks with angle and opacity controls.",
+    iconName: "Stamp",
+    popular: true,
+  },
+  {
+    id: "crop",
+    title: "Crop PDF",
+    category: "edit",
+    description: "Crop margins and trim PDF page boundaries precisely.",
+    iconName: "Crop",
+  },
+  {
+    id: "edit-pdf",
+    title: "Edit & Annotate PDF",
+    category: "edit",
+    description: "Draw, highlight, insert text boxes, shapes, and notes directly onto pages.",
+    iconName: "PenTool",
+    popular: true,
+  },
+  {
+    id: "pdf-forms",
+    title: "PDF Forms",
+    category: "edit",
+    description: "Fill interactive PDF form fields, checkboxes, dropdowns, and signature fields.",
+    iconName: "CheckSquare",
+  },
+
+  // Security
+  {
+    id: "unlock",
+    title: "Unlock PDF",
+    category: "security",
+    description: "Remove passwords, permissions, and security restrictions from protected PDFs.",
+    iconName: "Unlock",
+  },
+  {
+    id: "protect",
+    title: "Protect PDF",
+    category: "security",
+    description: "Encrypt PDFs with 128/256-bit AES encryption and strong password protection.",
+    iconName: "Lock",
+    popular: true,
+  },
+  {
+    id: "sign",
+    title: "Sign PDF",
+    category: "security",
+    description: "Draw, type, or upload legal electronic signatures onto your PDF files.",
+    iconName: "FileCheck",
+    popular: true,
+  },
+  {
+    id: "redact",
+    title: "Redact PDF",
+    category: "security",
+    description: "Permanently blackout and sanitize sensitive text, numbers, and private data.",
+    iconName: "EyeOff",
+    badge: "Security",
+  },
+  {
+    id: "compare",
+    title: "Compare PDF",
+    category: "security",
+    description: "Compare two PDF documents side-by-side to highlight text and visual diffs.",
+    iconName: "GitCompare",
+  },
+
+  // Intelligence
+  {
+    id: "ai-summarizer",
+    title: "AI Summarizer & Chat",
+    category: "intelligence",
+    description: "Powered by Gemini AI: Instant executive summaries, key highlights & Q&A document chat.",
+    iconName: "Sparkles",
+    badge: "Gemini AI",
+    popular: true,
+  },
+  {
+    id: "translate",
+    title: "AI Translate",
+    category: "intelligence",
+    description: "Translate full PDF documents into 30+ languages while preserving layout.",
+    iconName: "Languages",
+    badge: "Gemini AI",
+  },
+  {
+    id: "pdf-to-markdown",
+    title: "PDF to Markdown",
+    category: "intelligence",
+    description: "Transform complex PDFs into structured, clean Markdown with tables and headers.",
+    iconName: "Code",
+    badge: "Gemini AI",
+  },
+];
+
+export const CATEGORY_LABELS: Record<string, { title: string; desc: string; icon: string }> = {
+  organize: {
+    title: "Organize PDF",
+    desc: "Merge, split, extract, reorder, or scan documents effortlessly.",
+    icon: "FolderKanban",
+  },
+  optimize: {
+    title: "Optimize PDF",
+    desc: "Compress size, repair broken streams, or extract text with OCR.",
+    icon: "Zap",
+  },
+  "convert-to": {
+    title: "Convert to PDF",
+    desc: "Turn images, Word, PowerPoint, Excel & HTML files into PDFs.",
+    icon: "FilePlus",
+  },
+  "convert-from": {
+    title: "Convert from PDF",
+    desc: "Export PDFs to JPG, Word, PowerPoint, Excel & PDF/A formats.",
+    icon: "FileUp",
+  },
+  edit: {
+    title: "Edit PDF",
+    desc: "Annotate, draw, watermark, rotate, page number & fill form fields.",
+    icon: "PenTool",
+  },
+  security: {
+    title: "PDF Security",
+    desc: "Protect with encryption, unlock, e-sign, redact & compare documents.",
+    icon: "ShieldCheck",
+  },
+  intelligence: {
+    title: "PDF Intelligence",
+    desc: "Next-generation Gemini AI summarization, translation & Markdown parsing.",
+    icon: "BrainCircuit",
+  },
+};

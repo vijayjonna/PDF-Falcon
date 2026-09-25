@@ -1,0 +1,6 @@
+{
+  "name": "PDF Falcon",
+  "description": "Comprehensive PDF productivity suite with organize, convert, edit, security, OCR, and Gemini AI document intelligence tools.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
